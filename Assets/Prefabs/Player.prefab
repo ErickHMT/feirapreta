@@ -158,14 +158,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d195cd2ea47877e4ebaa6f6b8f99de09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 1
+  runSpeed: 40
   movementSmoothing: 0.1
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   groundCheck: {fileID: 1273221402590117815}
-  jumpForce: 400
-  fallJumpMultiplier: 2.5
+  jumpForce: 500
+  fallJumpMultiplier: 2
 --- !u!61 &3903600727122886363
 BoxCollider2D:
   m_ObjectHideFlags: 0
