@@ -131,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 165207357}
   - component: {fileID: 165207356}
+  - component: {fileID: 165207358}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -196,12 +197,38 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 165207355}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0769, y: -0.3374, z: 0}
-  m_LocalScale: {x: 506.32098, y: 68.4685, z: 1}
+  m_LocalPosition: {x: 0, y: -0.93, z: 0}
+  m_LocalScale: {x: 1500, y: 185.92604, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &165207358
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165207355}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.01, y: 0.01}
+    newSize: {x: 0.01, y: 0.01}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.01, y: 0.01}
+  m_EdgeRadius: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,7 +282,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -300,12 +327,12 @@ PrefabInstance:
     - target: {fileID: 5520584528353103958, guid: 4c837cddc2b180b4b9fa711bc83506e2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.005223471
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5520584528353103958, guid: 4c837cddc2b180b4b9fa711bc83506e2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.17
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5520584528353103958, guid: 4c837cddc2b180b4b9fa711bc83506e2,
         type: 3}
