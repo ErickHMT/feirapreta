@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float runSpeed = 20f;
     private bool isFacingRight = true;
     private int facingDirection = 1;
+    private Animator animator;
     private float moveInput;
     private Rigidbody2D rb;
     private bool canMove = true;
@@ -35,6 +37,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -56,6 +59,7 @@ public class PlayerController : MonoBehaviour
     public void Move(bool jump)
     {
         moveInput = Input.GetAxis("Horizontal") * runSpeed;
+        animator.SetFloat("Speed", Math.Abs(moveInput));
         rb.velocity = new Vector2(moveInput * runSpeed, rb.velocity.y);
 
         if(isWallSliding) 
@@ -124,6 +128,7 @@ public class PlayerController : MonoBehaviour
 
     private void CheckSurroundings() {
         bool wasGrounded = isGrounded;
+        animator.SetBool("IsGrounded", false);
         isGrounded = false;
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, groundedRadius, whatIsGround);
@@ -132,6 +137,7 @@ public class PlayerController : MonoBehaviour
             if (colliders[i].gameObject != gameObject)
             {
                 isGrounded = true;
+                animator.SetBool("IsGrounded", true);
                 if (!wasGrounded) {
                     Debug.Log("Tocou o chão!");
                     //Criar partículas de poeira
@@ -140,6 +146,7 @@ public class PlayerController : MonoBehaviour
         }
 
         isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsGround);
+        animator.SetBool("IsTouchingWall", isTouchingWall);
         Debug.Log("isTouchingWall: " + isTouchingWall);
     }
 
