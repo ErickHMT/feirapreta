@@ -164,8 +164,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   groundCheck: {fileID: 1273221402590117815}
-  jumpForce: 500
-  fallJumpMultiplier: 2
+  jumpForce: 700
+  fallJumpMultiplier: 3
 --- !u!61 &3903600727122886363
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -212,4 +212,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
