@@ -147,7 +147,7 @@ public class PlayerController : MonoBehaviour
 
         isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsGround);
         animator.SetBool("IsTouchingWall", isTouchingWall);
-        Debug.Log("isTouchingWall: " + isTouchingWall);
+        // Debug.Log("isTouchingWall: " + isTouchingWall);
     }
 
     private void CheckWallSliding() {
