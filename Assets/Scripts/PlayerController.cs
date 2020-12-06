@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     [Header("Grounded")]
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private Transform groundCheck;
-    private float groundedRadius = .2f;
+    private float groundedRadius = .3f;
     private bool isGrounded;
 
     [Header("Jump")]

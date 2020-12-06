@@ -351,7 +351,7 @@ MonoBehaviour:
   jumpForce: 1000
   fallJumpMultiplier: 5
   wallCheck: {fileID: 5117739154600148777}
-  wallCheckDistance: 0.8
+  wallCheckDistance: 0.4
   wallSlideSpeed: 2
   wallJumpForce: 2.5
   wallJumpDirection: {x: 3, y: 5}
